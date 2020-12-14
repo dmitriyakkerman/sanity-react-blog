@@ -1,14 +1,7 @@
-.header-navbar {
+.rcb-navbar {
   display: flex;
 
   &__item {
     margin: 0 10px;
-
-    a {
-
-      &.active {
-        text-decoration: underline;
-      }
-    }
   }
 }

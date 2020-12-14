@@ -1,8 +1,8 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Header from "./components/Header/Header";
-import Posts from "./pages/Posts";
-import Post from "./pages/Post";
-import About from "./pages/About";
+import PostsPage from "./pages/PostsPage";
+import PostPage from "./pages/PostPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
           <Header></Header>
           <main>
               <Switch>
-                  <Route component={Posts} path="/" exact></Route>
-                  <Route component={Post} path="/post/:slug" exact></Route>
-                  <Route component={About} path="/about"></Route>
+                  <Route component={PostsPage} path="/" exact></Route>
+                  <Route component={PostPage} path="/post/:slug" exact></Route>
+                  <Route component={AboutPage} path="/about"></Route>
               </Switch>
           </main>
       </BrowserRouter>

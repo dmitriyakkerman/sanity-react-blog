@@ -31,7 +31,7 @@ export default {
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
-        // Decorators usually describe a single property – e.g. a typographic
+        // Decorators usually describe a single-post property – e.g. a typographic
         // preference or highlighting by editors.
         decorators: [
           {title: 'Strong', value: 'strong'},

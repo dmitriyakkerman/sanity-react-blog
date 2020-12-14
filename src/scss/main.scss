@@ -1,4 +1,8 @@
 @import "variables";
 @import "core/main";
 @import "helpers/main";
-@import "header/header";
+@import "header/_header";
+@import "posts/_posts";
+@import "post/_post";
+@import "single-post/single-post";
+@import "components/_loaders";
