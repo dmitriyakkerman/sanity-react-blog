@@ -1,0 +1,29 @@
+@mixin abs-pos($top: -1, $left: -1, $right: -1, $bottom: -1, $tx: -1, $ty: -1) {
+  position: absolute;
+
+  @if $left != -1 {
+    left: $left;
+  }
+
+  @if $top != -1 {
+    top: $top;
+  }
+
+  @if $right != -1 {
+    top: $right;
+  }
+
+  @if $bottom != -1 {
+    top: $bottom;
+  }
+
+  @if $tx != -1 and $ty != -1 {
+    transform: translate($tx, $ty);
+  }
+  @else if $tx != -1 {
+    transform: translateX($tx);
+  }
+  @else if $ty != -1 {
+    transform: translateY($ty);
+  }
+}

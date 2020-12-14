@@ -1,0 +1,153 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+}
+
+@media(max-width: 767px) {
+
+  .container-fluid {
+    max-width: 767px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media(max-width: 575px) {
+
+  .container-fluid {
+    max-width: 575px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media(max-width: 379px) {
+
+  .container-fluid {
+    max-width: 379px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@each $i, $bp in $media-breakpoints {
+
+  @media (min-width: $bp) {
+    .container {
+      max-width: map-get($container-max-width, $i);
+    }
+  }
+
+}
+
+%row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $gutter / -2;
+  margin-right: $gutter / -2;
+}
+
+.row {
+  @extend %row;
+
+  &.align-start {
+    justify-content: flex-start;
+  }
+
+  &.align-center {
+    justify-content: center;
+  }
+
+  &.align-end {
+    justify-content: flex-end;
+  }
+
+  &.v-align-start {
+    align-items: flex-start;
+  }
+
+  &.v-align-center {
+    align-items: center;
+  }
+
+  &.v-align-end {
+    align-items: flex-end;
+  }
+
+}
+
+%col {
+  position: relative;
+  min-height: 1px;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+//XS col
+@for $i from 1 through $column-count {
+
+  .col-#{$i} {
+    @extend %col;
+  }
+
+  .col-#{$i} {
+    flex-basis: 100% / $column-count * $i;
+    width: 100% / $column-count * $i;
+  }
+
+  .col-offset-#{$i} {
+    margin-left: 100% / $column-count * $i;
+  }
+
+}
+
+@each $index, $bp in $media-breakpoints {
+
+  @for $i from 1 through $column-count {
+
+    .col-#{$index}-#{$i} {
+      @extend %col;
+    }
+
+  }
+
+}
+
+@each $index, $bp in $media-breakpoints {
+
+  @media (min-width: $bp) {
+
+    @for $i from 1 through $column-count {
+
+      .col-#{$index}-#{$i} {
+        flex-basis: 100% / $column-count * $i;
+        max-width: 100% / $column-count * $i;
+      }
+
+      .col-#{$index}-offset-#{$i} {
+        margin-left: 100% / $column-count * $i;
+      }
+    }
+  }
+}

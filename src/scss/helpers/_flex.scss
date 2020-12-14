@@ -1,0 +1,25 @@
+@mixin flex($alignX: flex-start, $alignY: flex-start) {
+  display: flex;
+  justify-content: $alignX;
+  align-items: $alignY;
+}
+
+%flex-left-top {
+  @include flex();
+}
+
+%flex-left-center {
+  @include flex(flex-start, center);
+}
+
+%flex-center-top {
+  @include flex(center, flex-start);
+}
+
+%flex-center-center {
+  @include flex(center, center);
+}
+
+%flex-right-center {
+  @include flex(flex-end, center);
+}

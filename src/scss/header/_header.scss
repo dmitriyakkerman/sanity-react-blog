@@ -1,0 +1,22 @@
+@import "navbar";
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  background: #373737;
+  color: $color-white;
+  z-index: 9;
+
+  a {
+    color: $color-white;
+  }
+
+  &__brand {
+    font-size: 25px;
+  }
+}
