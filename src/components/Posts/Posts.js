@@ -1,7 +1,8 @@
 import {Fragment} from 'react'
+import PropTypes from 'prop-types'
 import Post from "../Post/Post";
 
-export default function Posts({posts}) {
+function Posts({posts}) {
     return(
         <Fragment>
             {
@@ -12,3 +13,9 @@ export default function Posts({posts}) {
         </Fragment>
     )
 }
+
+Posts.propTypes = {
+    posts: PropTypes.arrayOf(Object)
+}
+
+export default Posts;

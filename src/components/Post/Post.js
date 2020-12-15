@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types'
 
-export default function Post({post}) {
+function Post({post}) {
     return(
         <Link to={"/post/" + post.slug.current} key={post.slug.current} className="rcb-post">
             <img src={post.mainImage.asset.url} alt={post.mainImage.alt}/>
@@ -8,3 +9,9 @@ export default function Post({post}) {
         </Link>
     )
 }
+
+Post.propTypes = {
+    post: PropTypes.object
+}
+
+export default Post;
