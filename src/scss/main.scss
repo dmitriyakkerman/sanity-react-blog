@@ -2,7 +2,15 @@
 @import "core/main";
 @import "helpers/main";
 @import "header/_header";
+@import "footer/footer";
+@import "home/_home";
+@import "about/_about";
+@import "contacts/_contacts";
 @import "posts/_posts";
 @import "post/_post";
 @import "single-post/single-post";
+@import "components/_navbar";
 @import "components/_loaders";
+@import "components/_title";
+@import "components/_subtext";
+@import "components/_socials";

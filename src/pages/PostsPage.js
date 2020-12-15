@@ -10,6 +10,7 @@ export default function PostsPage() {
         .fetch(`*[_type == "post"]{
             title,
             slug,
+            publishedAt,
             mainImage{
                 asset->{
                     _id,
@@ -19,12 +20,19 @@ export default function PostsPage() {
             }
         }`
         )
-        .then((posts) => setPosts(posts))
+        .then((posts) => {
+            setTimeout(() => {
+                setPosts(posts)
+            }, 1000)
+        })
     }, []);
 
     return (
         <div className="rcb-posts">
-            <Posts posts={posts}></Posts>
+            <div className="container">
+                <h2 className="title">Blog posts</h2>
+                <Posts posts={posts}></Posts>
+            </div>
         </div>
     );
 }

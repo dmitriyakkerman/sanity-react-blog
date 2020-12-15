@@ -15,6 +15,7 @@ export default function PostPage() {
             title,
             _id,
             slug,
+            publishedAt,
             mainImage{
                 asset->{
                     _id,
@@ -26,19 +27,26 @@ export default function PostPage() {
             "authorImage": author->image
         }`
             )
-            .then((posts) => setPost(posts[0]))
+            .then((posts) => {
+                setTimeout(() => {
+                    setPost(posts[0])
+                }, 1000)
+            })
             .catch(console.error);
     }, [slug]);
 
     if (!post) return <PostsLoader></PostsLoader>;
 
     return (
-        <div className="rcb__single-post">
-            <h1>{post.title}</h1>
-            {/*<img src={urlFor(singlePost.authorImage).url()} alt={singlePost.name}/>*/}
-            <p>{post.name}</p>
-            <img src={post.mainImage.asset.url} alt={post.title}/>
-            <BlockContent blocks={post.body} projectId="8cng7esn" dataset="production"/>
+        <div className="rcb-posts">
+            <div className="container">
+                <div className="single-post">
+                    <img src={post.mainImage.asset.url} alt={post.title} className="single-post__img"/>
+                    <h2 className="single-post__title">{post.title}</h2>
+                    <div className="single-post__date">{new Date(post.publishedAt).toLocaleDateString()}</div>
+                    <BlockContent blocks={post.body} projectId="8cng7esn" dataset="production"/>
+                </div>
+            </div>
         </div>
     );
 }

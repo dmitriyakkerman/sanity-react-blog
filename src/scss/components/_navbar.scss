@@ -1,0 +1,24 @@
+.rcb-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__brand {
+    font-size: 25px;
+    color: $color-white;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 10px;
+  }
+
+  &__link {
+    color: $color-white;
+  }
+}

@@ -1,0 +1,20 @@
+.rcb-about {
+  padding-top: 50px;
+
+  .rcb-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__title {
+    margin-top: 25px;
+  }
+}

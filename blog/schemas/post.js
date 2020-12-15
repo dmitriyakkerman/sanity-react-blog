@@ -1,6 +1,6 @@
 export default {
   name: 'post',
-  title: 'PostPage',
+  title: 'Post',
   type: 'document',
   fields: [
     {
