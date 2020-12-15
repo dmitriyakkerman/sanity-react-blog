@@ -14,7 +14,16 @@
     object-position: center;
   }
 
+  &__title,
+  &__bio {
+    text-align: center;
+  }
+
   &__title {
     margin-top: 25px;
+  }
+
+  &__bio {
+
   }
 }

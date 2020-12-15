@@ -2,7 +2,20 @@ import {useState} from 'react'
 
 export default function Contacts() {
 
-    const [contacts] = useState([])
+    const [contacts] = useState([
+        {
+            source: 'GitHub', value: 'https://github.com/dmitriyakkerman'
+        },
+        {
+            source: 'Telegram', value: 'https://t.me/mickyholbrook'
+        },
+        {
+            source: 'Instagram', value: 'https://www.instagram.com/michaelholbrook'
+        },
+        {
+            source: 'dmitriyakkerman@gmail.com', value: 'mailto:dmitriyakkerman@gmail.com'
+        }
+    ])
 
     return(
         <div className="rcb-contacts">

@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div className="container">
                 <div className="rcb-profile">
                     <img src={urlFor(bio.authorImage).url()} className="rcb-about__img" alt={bio.name}/>
-                    <h1 className="rcb-about__title">Hey there. I'm {bio.name}</h1>
+                    <h1 className="rcb-about__title">{bio.name}</h1>
                     <p className="rcb-about__bio">{bio.bio}</p>
                 </div>
             </div>
