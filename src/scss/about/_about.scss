@@ -1,29 +1,31 @@
 .rcb-about {
+  height: 100vh;
   padding-top: 50px;
+  background: url("../../img/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  .rcb-profile {
+  .rcb-info {
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
   }
 
   &__img {
     align-self: center;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     object-position: center;
-  }
-
-  &__title,
-  &__bio {
-    text-align: center;
-  }
-
-  &__title {
-    margin-top: 25px;
+    border-radius: 50%;
   }
 
   &__bio {
-
+    padding: 20px 40px;
+    margin: 50px auto 50px auto;
+    background-image: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.3));
+    color: $color-white;
+    font-size: 23px;
+    font-weight: 100;
   }
 }

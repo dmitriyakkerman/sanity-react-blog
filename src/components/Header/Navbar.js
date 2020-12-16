@@ -11,9 +11,6 @@ export default function Navbar() {
                 <li className="rcb-navbar__item">
                     <NavLink to="/posts" exact className="rcb-navbar__link">Blog</NavLink>
                 </li>
-                <li className="rcb-navbar__item">
-                    <NavLink to="/contacts" className="rcb-navbar__link">Contacts</NavLink>
-                </li>
             </ul>
         </div>
     )

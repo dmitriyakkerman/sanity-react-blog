@@ -16,30 +16,37 @@ export default function AboutPage() {
         sanityClient
         .fetch(`*[_type == "author"]{
             name,
-            "bio": bio[0].children[0].text,
+            "bio": bio,
             "authorImage": image.asset->url
         }`
         )
         .then((bio) => {
             setTimeout(() => {
-                setBio(bio[0])
+                console.log(bio)
+                setBio(bio)
                 setLoading(false)
             }, 1000)
         })
     }, []);
 
-    if(loading) {
-        return <PostsLoader></PostsLoader>
-    }
-
     return (
         <div className="rcb-about">
             <div className="container">
-                <div className="rcb-profile">
-                    <img src={urlFor(bio.authorImage).url()} className="rcb-about__img" alt={bio.name}/>
-                    <h1 className="rcb-about__title">{bio.name}</h1>
-                    <p className="rcb-about__bio">{bio.bio}</p>
-                </div>
+                <h2 className="title">About Me</h2>
+                {loading ? <PostsLoader></PostsLoader> :
+                    <div className="rcb-info">
+                        <img src={urlFor(bio[0].authorImage).url()} className="rcb-about__img" alt={bio.name}/>
+                        <div className="rcb-about__bio">
+                            {
+                                bio[0].bio.map(function (bio) {
+                                    return(
+                                        <div>{bio.children[0].text}</div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     );

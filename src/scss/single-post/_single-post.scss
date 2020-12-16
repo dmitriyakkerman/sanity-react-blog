@@ -3,6 +3,7 @@
   flex-direction: column;
   border-radius: 10px;
   padding: 20px;
+  color: #fff;
 
   &__img {
     width: 100%;
@@ -11,8 +12,22 @@
     object-fit: cover;
   }
 
+  &__date {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
   &__title,
-  p {
+  &__text {
     margin-top: 25px;
+  }
+
+  &__text {
+    padding: 20px;
+    background-image: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.3));
+
+    p {
+      margin: 0;
+    }
   }
 }

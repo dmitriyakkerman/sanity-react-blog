@@ -4,6 +4,41 @@
 
   &__item {
     margin: 0 10px;
+
+    &:first-child {
+
+      .socials__link {
+        background-image: url("../../img/socials/github.svg");
+      }
+    }
+
+    &:nth-child(2) {
+
+      .socials__link {
+        background-image: url("../../img/socials/linkedin.svg");
+      }
+    }
+
+    &:nth-child(3) {
+
+      .socials__link {
+        background-image: url("../../img/socials/telegram.svg");
+      }
+    }
+
+    &:nth-child(4) {
+
+      .socials__link {
+        background-image: url("../../img/socials/instagram.svg");
+      }
+    }
+
+    &:nth-child(5) {
+
+      .socials__link {
+        background-image: url("../../img/socials/gmail.svg");
+      }
+    }
   }
 
   &__link {
@@ -12,13 +47,5 @@
     height: 30px;
     background-size: contain;
     background-repeat: no-repeat;
-
-    &.fb {
-      background-image: url("../../img/socials/facebook.svg");
-    }
-
-    &.yt {
-      background-image: url("../../img/socials/youtube.svg");
-    }
   }
 }

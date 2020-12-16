@@ -30,7 +30,7 @@ export default function PostsPage() {
     return (
         <div className="rcb-posts">
             <div className="container">
-                <h2 className="title">Blog posts</h2>
+                <h2 className="title">Blog</h2>
                 <Posts posts={posts}></Posts>
             </div>
         </div>
