@@ -8,44 +8,62 @@
     &:first-child {
 
       .socials__link {
-        background-image: url("../../img/socials/github.svg");
+
+        i {
+          background-image: url("../../img/socials/github.svg");
+        }
       }
     }
 
     &:nth-child(2) {
 
       .socials__link {
-        background-image: url("../../img/socials/linkedin.svg");
+
+        i {
+          background-image: url("../../img/socials/linkedin.svg");
+        }
       }
     }
 
     &:nth-child(3) {
 
       .socials__link {
-        background-image: url("../../img/socials/telegram.svg");
+
+        i {
+          background-image: url("../../img/socials/telegram.svg");
+        }
       }
     }
 
     &:nth-child(4) {
 
       .socials__link {
-        background-image: url("../../img/socials/instagram.svg");
+
+        i {
+          background-image: url("../../img/socials/instagram.svg");
+        }
       }
     }
 
     &:nth-child(5) {
 
       .socials__link {
-        background-image: url("../../img/socials/gmail.svg");
+
+        i {
+          background-image: url("../../img/socials/gmail.svg");
+        }
       }
     }
   }
 
   &__link {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    i {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
