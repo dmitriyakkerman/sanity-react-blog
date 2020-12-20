@@ -11,6 +11,7 @@
     width: 100%;
     height: 220px;
     object-fit: cover;
+    object-position: top;
   }
 
   &__title {
@@ -31,5 +32,12 @@
     color: #858587;
     font-size: 16px;
     font-style: revert;
+  }
+}
+
+@media(max-width: 575px) {
+
+  .rcb-post {
+    width: 100%;
   }
 }

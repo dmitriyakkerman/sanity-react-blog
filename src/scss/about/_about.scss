@@ -29,3 +29,14 @@
     font-weight: 100;
   }
 }
+
+@media(max-width: 575px) {
+
+  .rcb-about {
+
+    &__bio {
+      padding: 20px;
+      font-size: 18px;
+    }
+  }
+}

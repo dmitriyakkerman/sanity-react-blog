@@ -10,6 +10,7 @@
     height: 500px;
     margin: 0 auto;
     object-fit: cover;
+    object-position: top;
   }
 
   &__date {
@@ -28,6 +29,16 @@
 
     p {
       margin: 0;
+    }
+  }
+}
+
+@media(max-width: 575px) {
+
+  .single-post {
+
+    &__img {
+      height: 300px;
     }
   }
 }

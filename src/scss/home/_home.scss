@@ -20,3 +20,19 @@
     font-weight: 300;
   }
 }
+
+@media(max-width: 575px) {
+
+  .rcb-home {
+    height: inherit;
+
+    &__title {
+      padding: 0;
+      font-size: 35px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
